@@ -119,7 +119,7 @@ void SYS_Initialize ( void* data )
 
 
 
-	UART0_Initialize();
+	PLIB_UART0_Initialize();
 
     Matrix_Initialize();
 
@@ -128,6 +128,8 @@ void SYS_Initialize ( void* data )
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
     XDMAC0_Initialize();
+
+	PLIB_UART0_Initialize();
 
 
 

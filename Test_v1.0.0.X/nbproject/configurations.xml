@@ -42,6 +42,10 @@
             <logicalFolder name="common" displayName="common" projectFiles="true">
               <itemPath>../src/config/default/safe_peripheral/common/plib_common.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/default/safe_peripheral/uart/plib_uart_common.h</itemPath>
+              <itemPath>../src/config/default/safe_peripheral/uart/plib_uart0.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="xdmac" displayName="xdmac" projectFiles="true">
               <itemPath>../src/config/default/safe_peripheral/xdmac/plib_xdmac0.h</itemPath>
               <itemPath>../src/config/default/safe_peripheral/xdmac/plib_xdmac_common.h</itemPath>
@@ -250,6 +254,9 @@
                          projectFiles="true">
             <logicalFolder name="common" displayName="common" projectFiles="true">
               <itemPath>../src/config/default/safe_peripheral/common/plib_common.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/default/safe_peripheral/uart/plib_uart0.c</itemPath>
             </logicalFolder>
             <logicalFolder name="xdmac" displayName="xdmac" projectFiles="true">
               <itemPath>../src/config/default/safe_peripheral/xdmac/plib_xdmac0.c</itemPath>

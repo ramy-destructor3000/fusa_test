@@ -58,6 +58,11 @@ uart_registers_t* lDIAG_UART_GetInstanceAddress(DIAG_UART_INSTANCE uartInstance)
     uart_registers_t* uartInstanceAddress = NULL;
     switch (uartInstance)
     {
+        case DIAG_UART_INSTANCE0:
+        {
+            uartInstanceAddress = UART0_REGS;
+            break;
+        }
         default:
         {
             uartInstanceAddress = NULL;
@@ -75,6 +80,13 @@ bool lDIAG_UART_GetXDMACChannel(DIAG_UART_INSTANCE uartInstance, XDMAC_CHANNEL *
     {
         switch(uartInstance)
         {
+            case DIAG_UART_INSTANCE0:
+            {
+                *txChannel = XDMAC_CHANNEL_0;
+                *rxChannel = XDMAC_CHANNEL_1;      
+                retVal = true;
+                break;
+            } 
             default:
             {
                 retVal = false;
@@ -94,6 +106,11 @@ void lDIAG_UART_CallbackRegister (DIAG_UART_INSTANCE uartInstance, UART_CALLBACK
 {
     switch (uartInstance)
     {
+        case DIAG_UART_INSTANCE0:
+        {             
+            UART0_CallbackRegister(callback,context);
+            break;
+        }
         default:
                 /* Nothing to do */
             break;

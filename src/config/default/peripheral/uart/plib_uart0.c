@@ -124,7 +124,7 @@ static void __attribute__((used)) UART0_ISR_TX_Handler( void )
     }
 }
 
-void __attribute__((used)) UART0_InterruptHandler( void )
+void __attribute__((used)) PLIB_UART0_InterruptHandler( void )
 {
     /* Error status */
     uint32_t errorStatusx = (UART0_REGS->UART_SR & (UART_SR_OVRE_Msk | UART_SR_FRAME_Msk | UART_SR_PARE_Msk));
@@ -161,7 +161,7 @@ void __attribute__((used)) UART0_InterruptHandler( void )
     }
 }
 
-static void UART0_ErrorClear( void )
+static void PLIB_UART0_ErrorClear( void )
 {
     uint8_t dummyData = 0u;
 
@@ -177,7 +177,7 @@ static void UART0_ErrorClear( void )
     (void)dummyData;
 }
 
-void UART0_Initialize( void )
+void PLIB_UART0_Initialize( void )
 {
     /* Reset UART0 */
     UART0_REGS->UART_CR = (UART_CR_RSTRX_Msk | UART_CR_RSTTX_Msk | UART_CR_RSTSTA_Msk);
@@ -189,7 +189,7 @@ void UART0_Initialize( void )
     UART0_REGS->UART_MR = ((UART_MR_BRSRCCK_PERIPH_CLK) | (UART_MR_PAR_NO) | (0U << UART_MR_FILTER_Pos));
 
     /* Configure UART0 Baud Rate */
-    UART0_REGS->UART_BRGR = UART_BRGR_CD(0);
+    UART0_REGS->UART_BRGR = UART_BRGR_CD(45);
 
     /* Initialize instance object */
     uart0Obj.rxBuffer = NULL;
@@ -204,7 +204,7 @@ void UART0_Initialize( void )
     uart0Obj.txCallback = NULL;
 }
 
-UART_ERROR UART0_ErrorGet( void )
+UART_ERROR PLIB_UART0_ErrorGet( void )
 {
     UART_ERROR errors = UART_ERROR_NONE;
     uint32_t status = UART0_REGS->UART_SR;
@@ -213,14 +213,14 @@ UART_ERROR UART0_ErrorGet( void )
 
     if(errors != UART_ERROR_NONE)
     {
-        UART0_ErrorClear();
+        PLIB_UART0_ErrorClear();
     }
 
     /* All errors are cleared, but send the previous error state */
     return errors;
 }
 
-bool UART0_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
+bool PLIB_UART0_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
     bool status = false;
     uint32_t baud;
@@ -266,7 +266,7 @@ bool UART0_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     return status;
 }
 
-bool UART0_Read( void *buffer, const size_t size )
+bool PLIB_UART0_Read( void *buffer, const size_t size )
 {
     bool status = false;
     UART_ERROR errorinfo;
@@ -277,7 +277,7 @@ bool UART0_Read( void *buffer, const size_t size )
     {
         /* Clear errors before submitting the request.
          * ErrorGet clears errors internally. */
-         errorinfo = UART0_ErrorGet();
+         errorinfo = PLIB_UART0_ErrorGet();
 
          if(errorinfo != 0U)
          {
@@ -301,7 +301,7 @@ bool UART0_Read( void *buffer, const size_t size )
     return status;
 }
 
-bool UART0_Write( void *buffer, const size_t size )
+bool PLIB_UART0_Write( void *buffer, const size_t size )
 {
     bool status = false;
     uint8_t * lBuffer = (uint8_t *)buffer;
@@ -331,41 +331,41 @@ bool UART0_Write( void *buffer, const size_t size )
     return status;
 }
 
-void UART0_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context )
+void PLIB_UART0_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context )
 {
     uart0Obj.txCallback = callback;
 
     uart0Obj.txContext = context;
 }
 
-void UART0_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context )
+void PLIB_UART0_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context )
 {
     uart0Obj.rxCallback = callback;
 
     uart0Obj.rxContext = context;
 }
 
-bool UART0_WriteIsBusy( void )
+bool PLIB_UART0_WriteIsBusy( void )
 {
     return uart0Obj.txBusyStatus;
 }
 
-bool UART0_ReadIsBusy( void )
+bool PLIB_UART0_ReadIsBusy( void )
 {
     return uart0Obj.rxBusyStatus;
 }
 
-size_t UART0_WriteCountGet( void )
+size_t PLIB_UART0_WriteCountGet( void )
 {
     return uart0Obj.txProcessedSize;
 }
 
-size_t UART0_ReadCountGet( void )
+size_t PLIB_UART0_ReadCountGet( void )
 {
     return uart0Obj.rxProcessedSize;
 }
 
-bool UART0_ReadAbort(void)
+bool PLIB_UART0_ReadAbort(void)
 {
     if (uart0Obj.rxBusyStatus == true)
     {
@@ -383,7 +383,7 @@ bool UART0_ReadAbort(void)
 }
 
 
-bool UART0_TransmitComplete( void )
+bool PLIB_UART0_TransmitComplete( void )
 {
     bool status = false;
 

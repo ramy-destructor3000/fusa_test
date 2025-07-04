@@ -57,36 +57,36 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define UART0_FrequencyGet()    (uint32_t)(0UL)
+#define UART0_FrequencyGet()    (uint32_t)(83000000UL)
 
 /****************************** UART0 API *********************************/
 
-void UART0_Initialize( void );
+void PLIB_UART0_Initialize( void );
 
-UART_ERROR UART0_ErrorGet( void );
+UART_ERROR PLIB_UART0_ErrorGet( void );
 
-bool UART0_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
+bool PLIB_UART0_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
 
-bool UART0_Write( void *buffer, const size_t size );
+bool PLIB_UART0_Write( void *buffer, const size_t size );
 
-bool UART0_Read( void *buffer, const size_t size );
+bool PLIB_UART0_Read( void *buffer, const size_t size );
 
-bool UART0_WriteIsBusy( void );
+bool PLIB_UART0_WriteIsBusy( void );
 
-bool UART0_ReadIsBusy( void );
+bool PLIB_UART0_ReadIsBusy( void );
 
-size_t UART0_WriteCountGet( void );
+size_t PLIB_UART0_WriteCountGet( void );
 
-size_t UART0_ReadCountGet( void );
+size_t PLIB_UART0_ReadCountGet( void );
 
-bool UART0_ReadAbort(void);
+bool PLIB_UART0_ReadAbort(void);
 
-void UART0_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context );
+void PLIB_UART0_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context );
 
-void UART0_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context );
+void PLIB_UART0_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context );
 
 
-bool UART0_TransmitComplete( void );
+bool PLIB_UART0_TransmitComplete( void );
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

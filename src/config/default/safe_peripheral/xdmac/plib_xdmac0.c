@@ -43,7 +43,7 @@
 #include "interrupts.h"
 #include "safe_peripheral/common/plib_common.h"
 /* Macro for limiting XDMAC objects to highest channel enabled */
-#define XDMAC_ACTIVE_CHANNELS_MAX (0U)
+#define XDMAC_ACTIVE_CHANNELS_MAX (2U)
 
 
 typedef struct
@@ -61,6 +61,34 @@ static XDMAC_CH_OBJECT xdmacChannelObj[XDMAC_ACTIVE_CHANNELS_MAX];
 // Section: XDMAC Implementation
 // *****************************************************************************
 // *****************************************************************************
+void XDMAC0_InterruptHandler( void )
+{
+    XDMAC_CH_OBJECT *xdmacChObj = (XDMAC_CH_OBJECT *)&xdmacChannelObj[0];
+    uint8_t channel = 0U;
+
+    /* Iterate all channels */
+    for (channel = 0U; channel < XDMAC_ACTIVE_CHANNELS_MAX; channel++)
+    {
+        /* Process events only on active channels */
+        if ((1U == xdmacChObj->inUse) && ((XDMAC0_REGS->XDMAC_GIM & (XDMAC_GIM_IM0_Msk << channel)) != 0U))
+        {
+                xdmacChObj->busyStatus = 0U;
+
+                /* It's a block transfer complete interrupt */
+                if (NULL != xdmacChObj->callback)
+                {
+                    xdmacChObj->callback(XDMAC_TRANSFER_COMPLETE, xdmacChObj->context);
+                }
+                else
+                {
+                    PLIB_COMMON_UpdateErrorStatus(XDMAC_ERROR_CALLBACK_NOT_REGISTERED);
+                }
+        }
+
+        /* Point to next channel object */
+        xdmacChObj ++;
+    }
+}
 
 void XDMAC0_Initialize( void )
 {
@@ -79,6 +107,36 @@ void XDMAC0_Initialize( void )
         xdmacChObj++;
     }
 
+    /* Configure Channel 0 */
+    XDMAC0_REGS->XDMAC_CHID[0].XDMAC_CC =  (XDMAC_CC_TYPE_PER_TRAN |
+                                            XDMAC_CC_PERID(35U) |
+                                            XDMAC_CC_DSYNC_MEM2PER |
+                                            XDMAC_CC_PROT_SEC |
+                                            XDMAC_CC_SWREQ_HWR_CONNECTED |
+                                            XDMAC_CC_DAM_FIXED_AM |
+                                            XDMAC_CC_SAM_INCREMENTED_AM |
+                                            XDMAC_CC_SIF_AHB_IF0 |
+                                            XDMAC_CC_DIF_AHB_IF1 |
+                                            XDMAC_CC_DWIDTH_BYTE |
+                                            XDMAC_CC_CSIZE_CHK_1 |\
+                                            XDMAC_CC_MBSIZE_SINGLE);
+    XDMAC0_REGS->XDMAC_CHID[0].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
+    xdmacChannelObj[0].inUse = 1U;
+    /* Configure Channel 1 */
+    XDMAC0_REGS->XDMAC_CHID[1].XDMAC_CC =  (XDMAC_CC_TYPE_PER_TRAN |
+                                            XDMAC_CC_PERID(36U) |
+                                            XDMAC_CC_DSYNC_PER2MEM |
+                                            XDMAC_CC_PROT_SEC |
+                                            XDMAC_CC_SWREQ_HWR_CONNECTED |
+                                            XDMAC_CC_DAM_INCREMENTED_AM |
+                                            XDMAC_CC_SAM_FIXED_AM |
+                                            XDMAC_CC_SIF_AHB_IF1 |
+                                            XDMAC_CC_DIF_AHB_IF0 |
+                                            XDMAC_CC_DWIDTH_BYTE |
+                                            XDMAC_CC_CSIZE_CHK_1 |\
+                                            XDMAC_CC_MBSIZE_SINGLE);
+    XDMAC0_REGS->XDMAC_CHID[1].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
+    xdmacChannelObj[1].inUse = 1U;
     return;
 }
 

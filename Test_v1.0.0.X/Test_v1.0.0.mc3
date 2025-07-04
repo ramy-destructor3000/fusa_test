@@ -26,6 +26,10 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>safe_uart0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>safe_xdmac0</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -46,7 +50,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;301&quot; canvasWidth=&quot;1137&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;495&quot; canvasWidth=&quot;1166&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
       &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
     &lt;/PowerProfiles&gt;
@@ -58,8 +62,9 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;diag_common&quot; x=&quot;480&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;diag_uart&quot; x=&quot;122&quot; y=&quot;213&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;safe_common&quot; x=&quot;640&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;safe_xdmac0&quot; x=&quot;820&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;uart0&quot; x=&quot;110&quot; y=&quot;383&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;safe_uart0&quot; x=&quot;1000&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;safe_xdmac0&quot; x=&quot;385&quot; y=&quot;243&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;uart0&quot; x=&quot;110&quot; y=&quot;383&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -71,11 +76,231 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_214_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_214_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GREEN&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_214_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_214_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_214_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_214_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_215_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_215_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;BLUE&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_215_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_215_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_215_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_215_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_221_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_221_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;USER&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_221_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_221_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_221_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_221_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_268_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_268_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;RED&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_268_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_268_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PIN_268_PERIPHERAL_FUNCTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_268_PERIPHERAL_FUNCTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PMC_PCER0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PMC_PCER0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;17047552&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;17047616&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueA"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueA&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueB"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueB&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueD"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueD&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueF"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueF&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PORT_A_MSKR_ValueGPIO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PORT_A_MSKR_ValueGPIO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x20380&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -137,6 +362,39 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="XDMAC0_CLOCK_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC0_CLOCK_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="XDMAC0_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC0_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="XDMAC0_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;XDMAC0_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;XDMAC0_InterruptHandler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="dfp" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
@@ -161,7 +419,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="diag_uart" name="DIAG_UART0_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;diag_uart&gt;
   &lt;diag_uart dnOrder=&quot;0&quot; id=&quot;DIAG_UART0_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/diag_uart&gt;
 &lt;/diag_uart&gt;
 </value>
@@ -170,8 +430,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="diag_uart" name="DIAG_UART0_XDMAC_RX_CHANNEL"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;diag_uart&gt;
   &lt;diag_uart dnOrder=&quot;0&quot; id=&quot;DIAG_UART0_XDMAC_RX_CHANNEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;diag_uart&quot; value=&quot;0&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/diag_uart&gt;
 &lt;/diag_uart&gt;
@@ -181,8 +447,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="diag_uart" name="DIAG_UART0_XDMAC_TX_CHANNEL"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;diag_uart&gt;
   &lt;diag_uart dnOrder=&quot;0&quot; id=&quot;DIAG_UART0_XDMAC_TX_CHANNEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;diag_uart&quot; value=&quot;0&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/diag_uart&gt;
 &lt;/diag_uart&gt;
@@ -324,6 +596,280 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_common" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="BAUD_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;BAUD_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="BRG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;BRG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="RECEIVE_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;RECEIVE_DATA_REGISTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="TRANSMIT_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;TRANSMIT_DATA_REGISTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_CLK_SRC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_CLK_SRC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_CLOCK_FREQ"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_CLOCK_FREQ&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_INSTANCE_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_INSTANCE_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_INTERRUPT_MODE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_INTERRUPT_MODE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_MR_DATA_WIDTH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_MR_DATA_WIDTH&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_MR_FILTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_MR_FILTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_MR_PAR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_MR_PAR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_MR_STOP_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_MR_STOP_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_OPERATING_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_OPERATING_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_PERIPHERAL_DMA_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_PERIPHERAL_DMA_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_RING_BUFFER_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_RING_BUFFER_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_RING_BUFFER_MODE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_RING_BUFFER_MODE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_RX_RING_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_RX_RING_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="UART_TX_RING_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;UART_TX_RING_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_DATA_8_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_8_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_FRAMING_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_FRAMING_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_OVERRUN_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_OVERRUN_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PARITY_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PARITY_EVEN_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_EVEN_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PARITY_MARK_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_MARK_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PARITY_NONE_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_NONE_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PARITY_ODD_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_ODD_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PARITY_SPACE_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_SPACE_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_PLIB_API_PREFIX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_PLIB_API_PREFIX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_uart0" name="USART_STOP_1_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_uart0&gt;
+  &lt;safe_uart0 dnOrder=&quot;0&quot; id=&quot;USART_STOP_1_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/safe_uart0&gt;
+&lt;/safe_uart0&gt;
+</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="#&amp;__MCC_Group_Parrent_id"/>
@@ -1395,7 +1941,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_CSIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_CSIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1404,7 +1952,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_DAM"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_DAM&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1413,7 +1963,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_DIF"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_DIF&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1422,7 +1974,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_DSYNC"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_DSYNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1431,7 +1985,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_DWIDTH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_DWIDTH&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1440,7 +1996,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_MBSIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_MBSIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1449,7 +2007,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_PERID"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_PERID&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;UART0_Transmit&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1467,7 +2027,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_PERID_VAL"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_PERID_VAL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;35&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1485,7 +2047,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_SAM"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_SAM&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1494,7 +2058,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_SIF"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_SIF&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1503,7 +2069,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_SWREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_SWREQ&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -1512,7 +2080,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC0_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC0_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2277,7 +2847,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_CSIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_CSIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2286,7 +2858,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_DAM"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_DAM&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2295,7 +2869,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_DIF"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_DIF&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2304,7 +2880,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_DSYNC"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_DSYNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2313,7 +2891,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_DWIDTH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_DWIDTH&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2322,7 +2902,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_MBSIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_MBSIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2331,7 +2913,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_PERID"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_PERID&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;UART0_Receive&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2349,7 +2933,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_PERID_VAL"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_PERID_VAL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;36&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2367,7 +2953,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_SAM"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_SAM&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2376,7 +2964,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_SIF"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_SIF&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2385,7 +2975,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_SWREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_SWREQ&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -2394,7 +2986,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CC1_TYPE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CC1_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -3411,7 +4005,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CH0_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CH0_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -3537,7 +4133,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_CH1_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_CH1_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -3699,7 +4297,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="safe_xdmac0" name="XDMAC_HIGHEST_CHANNEL"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;safe_xdmac0&gt;
   &lt;safe_xdmac0 dnOrder=&quot;0&quot; id=&quot;XDMAC_HIGHEST_CHANNEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;safe_xdmac0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/safe_xdmac0&gt;
 &lt;/safe_xdmac0&gt;
 </value>
@@ -3999,7 +4599,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>388fd3a36bfb1bb4151c42e646ac5c2b097a3725726adefdcc249cef465e7c62</hash>
+         <hash>b81e8a904d85dda5d7cd8e6010f877b3496ffb116fb0ced35fdaa43c33b54af1</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -4027,11 +4627,11 @@
       </entry>
       <entry>
          <file>..\src\config\default\diagnostic\uart\diag_uart_switcher.c</file>
-         <hash>3f54f25cc2c5373576585f2dda2032d5891096f7ec73881386a7410a32c59999</hash>
+         <hash>bc8ed80a7d295d77937391c0e00a3a32c9b954a71600567dc00a66eae23cd1bf</hash>
       </entry>
       <entry>
          <file>..\src\config\default\diagnostic\uart\diag_uart_switcher.h</file>
-         <hash>778be85e169d02c72a00cd2e9b7cf61aad9de101bf0e45591f85ae79025e9798</hash>
+         <hash>84142ef6ac4baee1386147ece913736232f129b64e2585009c69eed96cf65c1b</hash>
       </entry>
       <entry>
          <file>..\src\config\default\fault_handlers.c</file>
@@ -4039,7 +4639,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>3b26a2a40c0c373a1a373195a4813c96dc5522c195a38285ecdc9b11494d3211</hash>
+         <hash>b8f97f707f0782dc0c861489e5796fea910ffe347195500d3af7fd5e90a74bc9</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -4047,11 +4647,11 @@
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.h</file>
-         <hash>3cdde3da96cfbe9d12e91861b6ec9b57cbcd3bafdca3e4cc5a6322d586a4afd2</hash>
+         <hash>a2a2be74c255618c53b0b8c24fd8ad6f8c4e4f4b488d85710c3ff20c4c4ce921</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\aic\plib_aic.c</file>
-         <hash>56220da3e6a633036e1475822e35e1cb57afccc64a5a67f15b0bb29e3f09775c</hash>
+         <hash>5ef160bcbfce520418b0c7383e1a99651731b70b35b7ee094aadbb82476259bb</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\aic\plib_aic.h</file>
@@ -4059,7 +4659,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\clk\plib_clk.c</file>
-         <hash>9b0bfa2102e055f20cf81f507ec748455f48476fe2144109c0f21be9c445bfc0</hash>
+         <hash>cbfa5be831fb7de892846c733710390e43cefe2e9eca204cb027bc75915181b8</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\clk\plib_clk.h</file>
@@ -4083,19 +4683,19 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\pio\plib_pio.c</file>
-         <hash>4497b701e14cf1cd24ae4751a16221b03a4446a7ab1581d6f8e5e62ec86a0996</hash>
+         <hash>b6efb11580dbc10fd9504e40c96eaddc324f0ae8fefeb5867967be8b021b6b3a</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\pio\plib_pio.h</file>
-         <hash>9c05b53db2d44dcde26e3d553a5dc984b0324e1e8dcf7a46c723c6d31286f476</hash>
+         <hash>c8b8409e1311ac5af5346a21b33f6742e78461e7a89a75eaf2397ea0257016cc</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\uart\plib_uart0.c</file>
-         <hash>5cdecc54dd5fb24f621d39ea3313b3766a5073dca16c4a10cea3d85422d61f47</hash>
+         <hash>64f7f5f2907154fbebc61b43c70d2626d12f76998dfc4cd7cb6b731440cda99c</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\uart\plib_uart0.h</file>
-         <hash>04be4b971b059f1c030d7bcfbf0c0ef12b9b3c05b2febc9e86bd39d685ae2afb</hash>
+         <hash>3761c7c413bf3ae9639f46df750997df6329dac6023007c80f6795a3cee94dab</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\uart\plib_uart_common.h</file>
@@ -4103,7 +4703,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\pin_configurations.csv</file>
-         <hash>4b3ff9df4cec397fdb50b709532e9b4bdbe85a32d75670c1cb9265cafb5625d2</hash>
+         <hash>b13a409df6366e8ec65602085c17087a29b8f122e62c4115eb09a812592579b8</hash>
       </entry>
       <entry>
          <file>..\src\config\default\safe_peripheral\common\plib_common.c</file>
@@ -4114,8 +4714,20 @@
          <hash>c82f5aa7098ff8ba1f54f05b4bead059465b5f82a5c2f9edb4fc81c0c6b9fd71</hash>
       </entry>
       <entry>
+         <file>..\src\config\default\safe_peripheral\uart\plib_uart0.c</file>
+         <hash>2028365d5482b4be34ea305d04a7b0655d0084242bc2e3004ef23afbf7fa308c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\safe_peripheral\uart\plib_uart0.h</file>
+         <hash>3ac987ee2e66664df63d352f5b190909a214ce0434f3ca50aa9af65c04358aef</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\safe_peripheral\uart\plib_uart_common.h</file>
+         <hash>04274cc8b49ad5c98e2738eff421224a89222e9942464ad0bdb8ce85a4821825</hash>
+      </entry>
+      <entry>
          <file>..\src\config\default\safe_peripheral\xdmac\plib_xdmac0.c</file>
-         <hash>9c15573dfc06489d30e66fde4a4842ed0c3da07b2b7e6cacb6032b09e9cf3384</hash>
+         <hash>46cb6276d72e8fe5f8dc134570a52a29dca0539b7e4cfe0f04afbcb9848388cf</hash>
       </entry>
       <entry>
          <file>..\src\config\default\safe_peripheral\xdmac\plib_xdmac0.h</file>

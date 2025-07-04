@@ -58,6 +58,12 @@
 */
 void PIO_Initialize ( void )
 {
+ /* Port A Peripheral function GPIO configuration */
+   PIOA_REGS->PIO_MSKR = 0x20380U;
+   PIOA_REGS->PIO_CFGR = 0x0U;
+
+ /* Port A Latch configuration */
+   PIOA_REGS->PIO_CODR = 0x20380U;
 
 
 

@@ -67,7 +67,8 @@ static struct
     uint32_t        priority;
 }irqData[] =
 {
-    { 24U, UART0_InterruptHandler,     AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+    { 6U,  XDMAC0_InterruptHandler,    AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+    { 24U, PLIB_UART0_InterruptHandler,     AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
 };
 
 // *****************************************************************************

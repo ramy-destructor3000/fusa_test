@@ -48,6 +48,7 @@
 extern "C" {
 #endif
 #include <stdint.h>
+#include "safe_peripheral/uart/plib_uart0.h"
 #include "safe_peripheral/xdmac/plib_xdmac0.h"
     
     
