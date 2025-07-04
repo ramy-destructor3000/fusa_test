@@ -8,6 +8,8 @@ c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../.
                               build/default/debug/_ext/1171490990/cstartup.o (__libc_init_array)
 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
                               c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o) (__progname_full)
+c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+                              build/default/debug/_ext/1360937237/main.o (memcpy)
 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
                               c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o) (__environ)
 
@@ -20,15 +22,15 @@ Microchip PIC32 Memory-Usage Report
 RAM Data-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.text                   0x26f00000          0xcb4        3252   
-.relocate               0x26f00cb4           0x3c          60   
-.region_cache_aligned_c 0x26f00cf0           0x10          16   
-.bss                    0x26f04000         0x80ac       32940  Uninitialized data 
-.region_cache_aligned   0x26f0c0ac           0x14          20   
+.text                   0x26f00000         0x1a7c        6780   
+.data                   0x26f01a7c           0x88         136  Initialized data 
+.relocate               0x26f01b04           0x3c          60   
+.bss                    0x26f04000         0x80bc       32956  Uninitialized data 
+.region_cache_aligned   0x26f0c0bc            0x4           4   
 .stacks                 0x26f0c0c0         0x2140        8512   
-         Total RAM used  :      0xaf00       44800  0.0% of 0x1f000000
+         Total RAM used  :      0xbd40       48448  0.0% of 0x1f000000
         --------------------------------------------------------------------------
-            Total Data Memory used  :      0xaf00       44800  0.0% of 0x1f000000
+            Total Data Memory used  :      0xbd40       48448  0.0% of 0x1f000000
         --------------------------------------------------------------------------
 
 
@@ -57,115 +59,119 @@ Discarded input sections
  .text          0x00000000        0x0 build/default/debug/_ext/1222143438/diag_common.o
  .data          0x00000000        0x0 build/default/debug/_ext/1222143438/diag_common.o
  .bss           0x00000000        0x0 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_UpdateErrorStatus
-                0x00000000       0x10 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_GetErrorStatus
-                0x00000000       0x10 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_ResetErrorStatus
-                0x00000000       0x14 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_REG_WriteProtection
-                0x00000000      0x1bc build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_REG_Reset
-                0x00000000       0x84 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_REG_WriteRead
-                0x00000000       0xd0 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_memcmp
-                0x00000000       0x94 build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_memset
-                0x00000000       0x2c build/default/debug/_ext/1222143438/diag_common.o
- .text.DIAG_COMMON_IsInRange
-                0x00000000       0x3c build/default/debug/_ext/1222143438/diag_common.o
  .bss.diagErrorStatus
                 0x00000000        0x4 build/default/debug/_ext/1222143438/diag_common.o
- .debug_info    0x00000000      0xa73 build/default/debug/_ext/1222143438/diag_common.o
- .debug_abbrev  0x00000000      0x232 build/default/debug/_ext/1222143438/diag_common.o
- .debug_loc     0x00000000      0xbdb build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_UpdateErrorStatus
+                0x00000000       0x30 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_GetErrorStatus
+                0x00000000       0x24 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_ResetErrorStatus
+                0x00000000       0x28 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_REG_WriteProtection
+                0x00000000      0x70c build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_REG_Reset
+                0x00000000       0xe0 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_REG_WriteRead
+                0x00000000      0x398 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_memcmp
+                0x00000000      0x114 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_memset
+                0x00000000       0x88 build/default/debug/_ext/1222143438/diag_common.o
+ .text.DIAG_COMMON_IsInRange
+                0x00000000       0x90 build/default/debug/_ext/1222143438/diag_common.o
+ .debug_info    0x00000000      0x9d1 build/default/debug/_ext/1222143438/diag_common.o
+ .debug_abbrev  0x00000000      0x1c9 build/default/debug/_ext/1222143438/diag_common.o
+ .debug_loc     0x00000000      0x264 build/default/debug/_ext/1222143438/diag_common.o
  .debug_aranges
                 0x00000000       0x60 build/default/debug/_ext/1222143438/diag_common.o
  .debug_ranges  0x00000000       0x50 build/default/debug/_ext/1222143438/diag_common.o
- .debug_line    0x00000000      0x53c build/default/debug/_ext/1222143438/diag_common.o
+ .debug_line    0x00000000      0x536 build/default/debug/_ext/1222143438/diag_common.o
  .debug_str     0x00000000       0x2b build/default/debug/_ext/1222143438/diag_common.o
  .comment       0x00000000       0x3e build/default/debug/_ext/1222143438/diag_common.o
- .debug_frame   0x00000000       0xf4 build/default/debug/_ext/1222143438/diag_common.o
+ .debug_frame   0x00000000      0x138 build/default/debug/_ext/1222143438/diag_common.o
  .ARM.attributes
                 0x00000000       0x39 build/default/debug/_ext/1222143438/diag_common.o
  .text          0x00000000        0x0 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .data          0x00000000        0x0 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .bss           0x00000000        0x0 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .text.lDIAG_UART_GetInstanceAddress
-                0x00000000       0x18 build/default/debug/_ext/505776171/diag_uart_switcher.o
+                0x00000000       0x58 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .text.lDIAG_UART_GetXDMACChannel
-                0x00000000       0x44 build/default/debug/_ext/505776171/diag_uart_switcher.o
+                0x00000000       0x8c build/default/debug/_ext/505776171/diag_uart_switcher.o
  .text.lDIAG_UART_CallbackRegister
-                0x00000000       0x1c build/default/debug/_ext/505776171/diag_uart_switcher.o
- .debug_info    0x00000000      0x87e build/default/debug/_ext/505776171/diag_uart_switcher.o
- .debug_abbrev  0x00000000      0x18c build/default/debug/_ext/505776171/diag_uart_switcher.o
- .debug_loc     0x00000000      0x18a build/default/debug/_ext/505776171/diag_uart_switcher.o
+                0x00000000       0x48 build/default/debug/_ext/505776171/diag_uart_switcher.o
+ .debug_info    0x00000000      0x840 build/default/debug/_ext/505776171/diag_uart_switcher.o
+ .debug_abbrev  0x00000000      0x136 build/default/debug/_ext/505776171/diag_uart_switcher.o
+ .debug_loc     0x00000000       0xc0 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .debug_aranges
                 0x00000000       0x30 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .debug_ranges  0x00000000       0x20 build/default/debug/_ext/505776171/diag_uart_switcher.o
- .debug_line    0x00000000      0x214 build/default/debug/_ext/505776171/diag_uart_switcher.o
- .debug_str     0x00000000       0x24 build/default/debug/_ext/505776171/diag_uart_switcher.o
+ .debug_line    0x00000000      0x1ea build/default/debug/_ext/505776171/diag_uart_switcher.o
+ .debug_str     0x00000000        0xd build/default/debug/_ext/505776171/diag_uart_switcher.o
  .comment       0x00000000       0x3e build/default/debug/_ext/505776171/diag_uart_switcher.o
- .debug_frame   0x00000000       0x48 build/default/debug/_ext/505776171/diag_uart_switcher.o
+ .debug_frame   0x00000000       0x70 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .ARM.attributes
                 0x00000000       0x39 build/default/debug/_ext/505776171/diag_uart_switcher.o
  .text          0x00000000        0x0 build/default/debug/_ext/505776171/diag_uart.o
  .data          0x00000000        0x0 build/default/debug/_ext/505776171/diag_uart.o
  .bss           0x00000000        0x0 build/default/debug/_ext/505776171/diag_uart.o
- .text.lDIAG_UART_InterruptClear
-                0x00000000       0x54 build/default/debug/_ext/505776171/diag_uart.o
- .text.lDIAG_UART_InterruptCallback
-                0x00000000      0x1ac build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_Enable
-                0x00000000       0x38 build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_Disable
-                0x00000000       0x6c build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_Communication
-                0x00000000      0x164 build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_DMARequest
-                0x00000000      0x178 build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_REGReset
-                0x00000000       0x2c build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_REGWriteRead
-                0x00000000       0x2c build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_REGWriteProtection
-                0x00000000       0x54 build/default/debug/_ext/505776171/diag_uart.o
- .text.DIAG_UART_Interrupt
-                0x00000000      0x2bc build/default/debug/_ext/505776171/diag_uart.o
+ .rodata.txMessage
+                0x00000000       0x20 build/default/debug/_ext/505776171/diag_uart.o
  .bss.rxMessage
                 0x00000000       0x20 build/default/debug/_ext/505776171/diag_uart.o
  .data.diagUartObj
                 0x00000000       0x18 build/default/debug/_ext/505776171/diag_uart.o
- .rodata.txMessage
-                0x00000000       0x20 build/default/debug/_ext/505776171/diag_uart.o
- .rodata.uartREGInfo
-                0x00000000       0x3c build/default/debug/_ext/505776171/diag_uart.o
  .rodata.uartResetRegInfo
                 0x00000000       0x48 build/default/debug/_ext/505776171/diag_uart.o
+ .rodata.uartREGInfo
+                0x00000000       0x3c build/default/debug/_ext/505776171/diag_uart.o
  .rodata.uartWpRegSet
                 0x00000000       0x3c build/default/debug/_ext/505776171/diag_uart.o
- .debug_info    0x00000000     0x1afd build/default/debug/_ext/505776171/diag_uart.o
- .debug_abbrev  0x00000000      0x337 build/default/debug/_ext/505776171/diag_uart.o
- .debug_loc     0x00000000      0xe6f build/default/debug/_ext/505776171/diag_uart.o
+ .text.lDIAG_UART_InterruptClear
+                0x00000000       0xa0 build/default/debug/_ext/505776171/diag_uart.o
+ .text.lDIAG_UART_InterruptCallback
+                0x00000000      0x310 build/default/debug/_ext/505776171/diag_uart.o
+ .text.lDIAG_UART_WriteRead
+                0x00000000      0x1b4 build/default/debug/_ext/505776171/diag_uart.o
+ .text.lDIAG_UART_EnableLocalLoopback
+                0x00000000       0x54 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_Enable
+                0x00000000       0x84 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_Disable
+                0x00000000       0xe8 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_Communication
+                0x00000000      0x118 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_DMARequest
+                0x00000000      0x22c build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_REGReset
+                0x00000000       0x70 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_REGWriteRead
+                0x00000000       0x70 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_REGWriteProtection
+                0x00000000       0x90 build/default/debug/_ext/505776171/diag_uart.o
+ .text.DIAG_UART_Interrupt
+                0x00000000      0x46c build/default/debug/_ext/505776171/diag_uart.o
+ .debug_info    0x00000000     0x15f7 build/default/debug/_ext/505776171/diag_uart.o
+ .debug_abbrev  0x00000000      0x241 build/default/debug/_ext/505776171/diag_uart.o
+ .debug_loc     0x00000000      0x2b8 build/default/debug/_ext/505776171/diag_uart.o
  .debug_aranges
-                0x00000000       0x68 build/default/debug/_ext/505776171/diag_uart.o
- .debug_ranges  0x00000000       0x78 build/default/debug/_ext/505776171/diag_uart.o
- .debug_line    0x00000000      0x94c build/default/debug/_ext/505776171/diag_uart.o
- .debug_str     0x00000000      0x16c build/default/debug/_ext/505776171/diag_uart.o
+                0x00000000       0x78 build/default/debug/_ext/505776171/diag_uart.o
+ .debug_ranges  0x00000000       0x68 build/default/debug/_ext/505776171/diag_uart.o
+ .debug_line    0x00000000      0x6b2 build/default/debug/_ext/505776171/diag_uart.o
+ .debug_str     0x00000000       0x34 build/default/debug/_ext/505776171/diag_uart.o
  .comment       0x00000000       0x3e build/default/debug/_ext/505776171/diag_uart.o
- .debug_frame   0x00000000      0x114 build/default/debug/_ext/505776171/diag_uart.o
+ .debug_frame   0x00000000      0x19c build/default/debug/_ext/505776171/diag_uart.o
  .ARM.attributes
                 0x00000000       0x39 build/default/debug/_ext/505776171/diag_uart.o
  .text          0x00000000        0x0 build/default/debug/_ext/60163497/plib_aic.o
  .data          0x00000000        0x0 build/default/debug/_ext/60163497/plib_aic.o
  .bss           0x00000000        0x0 build/default/debug/_ext/60163497/plib_aic.o
  .text.AIC_INT_IrqEnable
-                0x00000000        0xc build/default/debug/_ext/60163497/plib_aic.o
- .text.AIC_INT_IrqDisable
-                0x00000000       0x28 build/default/debug/_ext/60163497/plib_aic.o
- .text.AIC_INT_IrqRestore
                 0x00000000       0x20 build/default/debug/_ext/60163497/plib_aic.o
+ .text.AIC_INT_IrqDisable
+                0x00000000       0x50 build/default/debug/_ext/60163497/plib_aic.o
+ .text.AIC_INT_IrqRestore
+                0x00000000       0x44 build/default/debug/_ext/60163497/plib_aic.o
  .text          0x00000000        0x0 build/default/debug/_ext/60165520/plib_clk.o
  .data          0x00000000        0x0 build/default/debug/_ext/60165520/plib_clk.o
  .bss           0x00000000        0x0 build/default/debug/_ext/60165520/plib_clk.o
@@ -176,102 +182,106 @@ Discarded input sections
  .data          0x00000000        0x0 build/default/debug/_ext/60175171/plib_mmu.o
  .bss           0x00000000        0x0 build/default/debug/_ext/60175171/plib_mmu.o
  .text.icache_InvalidateAll
-                0x00000000       0x14 build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000       0x34 build/default/debug/_ext/60175171/plib_mmu.o
  .text.icache_Disable
-                0x00000000       0x28 build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000       0x68 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_InvalidateAll
-                0x00000000       0xdc build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000      0x278 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_CleanAll
-                0x00000000       0xdc build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000      0x278 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_CleanInvalidateAll
-                0x00000000       0xdc build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000      0x278 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_InvalidateByAddr
-                0x00000000       0x4c build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000       0x80 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_CleanByAddr
-                0x00000000       0x4c build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000       0x80 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_CleanInvalidateByAddr
-                0x00000000       0x4c build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000       0x80 build/default/debug/_ext/60175171/plib_mmu.o
  .text.dcache_Disable
-                0x00000000      0x1c8 build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000000      0x508 build/default/debug/_ext/60175171/plib_mmu.o
  .text          0x00000000        0x0 build/default/debug/_ext/60177924/plib_pio.o
  .data          0x00000000        0x0 build/default/debug/_ext/60177924/plib_pio.o
  .bss           0x00000000        0x0 build/default/debug/_ext/60177924/plib_pio.o
+ .text.PIO_Initialize
+                0x00000000       0x50 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortRead
-                0x00000000       0x14 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x38 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortWrite
-                0x00000000       0x18 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x58 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortLatchRead
-                0x00000000       0x14 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x38 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortSet
-                0x00000000       0x14 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x40 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortClear
-                0x00000000       0x14 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x40 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortToggle
-                0x00000000       0x20 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x70 build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortInputEnable
-                0x00000000       0x20 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x6c build/default/debug/_ext/60177924/plib_pio.o
  .text.PIO_PortOutputEnable
-                0x00000000       0x20 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000000       0x6c build/default/debug/_ext/60177924/plib_pio.o
+ .debug_info    0x00000000      0xaec build/default/debug/_ext/60177924/plib_pio.o
+ .debug_abbrev  0x00000000      0x11e build/default/debug/_ext/60177924/plib_pio.o
+ .debug_loc     0x00000000      0x264 build/default/debug/_ext/60177924/plib_pio.o
+ .debug_aranges
+                0x00000000       0x60 build/default/debug/_ext/60177924/plib_pio.o
+ .debug_ranges  0x00000000       0x50 build/default/debug/_ext/60177924/plib_pio.o
+ .debug_line    0x00000000      0x1e6 build/default/debug/_ext/60177924/plib_pio.o
+ .debug_str     0x00000000       0x1e build/default/debug/_ext/60177924/plib_pio.o
+ .comment       0x00000000       0x3e build/default/debug/_ext/60177924/plib_pio.o
+ .debug_frame   0x00000000      0x130 build/default/debug/_ext/60177924/plib_pio.o
+ .ARM.attributes
+                0x00000000       0x39 build/default/debug/_ext/60177924/plib_pio.o
  .text          0x00000000        0x0 build/default/debug/_ext/1865657120/plib_uart0.o
  .data          0x00000000        0x0 build/default/debug/_ext/1865657120/plib_uart0.o
  .bss           0x00000000        0x0 build/default/debug/_ext/1865657120/plib_uart0.o
- .text.PLIB_UART0_ErrorGet
-                0x00000000       0x4c build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_SerialSetup
-                0x00000000       0xa0 build/default/debug/_ext/1865657120/plib_uart0.o
- .text.PLIB_UART0_Read
-                0x00000000       0x6c build/default/debug/_ext/1865657120/plib_uart0.o
- .text.PLIB_UART0_Write
-                0x00000000       0x9c build/default/debug/_ext/1865657120/plib_uart0.o
- .text.PLIB_UART0_WriteCallbackRegister
-                0x00000000       0x14 build/default/debug/_ext/1865657120/plib_uart0.o
- .text.PLIB_UART0_ReadCallbackRegister
-                0x00000000       0x14 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000      0x120 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_WriteIsBusy
-                0x00000000       0x10 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000       0x28 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_ReadIsBusy
-                0x00000000       0x10 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000       0x28 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_WriteCountGet
-                0x00000000       0x10 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000       0x24 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_ReadCountGet
-                0x00000000       0x10 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000       0x24 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_ReadAbort
-                0x00000000       0x44 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000       0x74 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_TransmitComplete
-                0x00000000       0x14 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000000       0x48 build/default/debug/_ext/1865657120/plib_uart0.o
  .text          0x00000000        0x0 build/default/debug/_ext/2061166547/plib_common.o
  .data          0x00000000        0x0 build/default/debug/_ext/2061166547/plib_common.o
  .bss           0x00000000        0x0 build/default/debug/_ext/2061166547/plib_common.o
  .text.PLIB_COMMON_GetErrorStatus
-                0x00000000       0x10 build/default/debug/_ext/2061166547/plib_common.o
+                0x00000000       0x24 build/default/debug/_ext/2061166547/plib_common.o
  .text.PLIB_COMMON_ResetErrorStatus
-                0x00000000       0x14 build/default/debug/_ext/2061166547/plib_common.o
+                0x00000000       0x28 build/default/debug/_ext/2061166547/plib_common.o
  .text          0x00000000        0x0 build/default/debug/_ext/47423391/plib_xdmac0.o
  .data          0x00000000        0x0 build/default/debug/_ext/47423391/plib_xdmac0.o
  .bss           0x00000000        0x0 build/default/debug/_ext/47423391/plib_xdmac0.o
  .text.XDMAC0_ChannelCallbackRegister
-                0x00000000       0x18 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x00000000       0x64 build/default/debug/_ext/47423391/plib_xdmac0.o
  .text.XDMAC0_ChannelTransfer
-                0x00000000       0xbc build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x00000000      0x178 build/default/debug/_ext/47423391/plib_xdmac0.o
  .text.XDMAC0_ChannelTransferStatusGet
-                0x00000000       0x44 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x00000000       0x94 build/default/debug/_ext/47423391/plib_xdmac0.o
  .text.XDMAC0_ChannelLinkedListTransfer
-                0x00000000       0xb4 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x00000000      0x150 build/default/debug/_ext/47423391/plib_xdmac0.o
  .text          0x00000000        0x0 build/default/debug/_ext/163028504/xc32_monitor.o
  .data          0x00000000        0x0 build/default/debug/_ext/163028504/xc32_monitor.o
  .bss           0x00000000        0x0 build/default/debug/_ext/163028504/xc32_monitor.o
- .text.read     0x00000000        0x8 build/default/debug/_ext/163028504/xc32_monitor.o
- .text.write    0x00000000        0x8 build/default/debug/_ext/163028504/xc32_monitor.o
- .debug_info    0x00000000      0x344 build/default/debug/_ext/163028504/xc32_monitor.o
- .debug_abbrev  0x00000000       0x96 build/default/debug/_ext/163028504/xc32_monitor.o
- .debug_loc     0x00000000       0x4a build/default/debug/_ext/163028504/xc32_monitor.o
+ .text.read     0x00000000       0x2c build/default/debug/_ext/163028504/xc32_monitor.o
+ .text.write    0x00000000       0x2c build/default/debug/_ext/163028504/xc32_monitor.o
+ .debug_info    0x00000000      0x340 build/default/debug/_ext/163028504/xc32_monitor.o
+ .debug_abbrev  0x00000000       0x82 build/default/debug/_ext/163028504/xc32_monitor.o
+ .debug_loc     0x00000000       0x88 build/default/debug/_ext/163028504/xc32_monitor.o
  .debug_aranges
                 0x00000000       0x28 build/default/debug/_ext/163028504/xc32_monitor.o
  .debug_ranges  0x00000000       0x18 build/default/debug/_ext/163028504/xc32_monitor.o
- .debug_line    0x00000000       0xca build/default/debug/_ext/163028504/xc32_monitor.o
+ .debug_line    0x00000000       0xc6 build/default/debug/_ext/163028504/xc32_monitor.o
  .debug_str     0x00000000        0x0 build/default/debug/_ext/163028504/xc32_monitor.o
  .comment       0x00000000       0x3e build/default/debug/_ext/163028504/xc32_monitor.o
- .debug_frame   0x00000000       0x30 build/default/debug/_ext/163028504/xc32_monitor.o
+ .debug_frame   0x00000000       0x50 build/default/debug/_ext/163028504/xc32_monitor.o
  .ARM.attributes
                 0x00000000       0x39 build/default/debug/_ext/163028504/xc32_monitor.o
  .text          0x00000000        0x0 build/default/debug/_ext/1171490990/fault_handlers.o
@@ -291,23 +301,23 @@ Discarded input sections
  .text          0x00000000        0x0 build/default/debug/_ext/1621872/plib_uart0.o
  .data          0x00000000        0x0 build/default/debug/_ext/1621872/plib_uart0.o
  .bss           0x00000000        0x0 build/default/debug/_ext/1621872/plib_uart0.o
- .text.UART0_InterruptHandler
-                0x00000000       0x38 build/default/debug/_ext/1621872/plib_uart0.o
- .text.UART0_Initialize
-                0x00000000       0x3c build/default/debug/_ext/1621872/plib_uart0.o
- .text.UART0_CallbackRegister
-                0x00000000       0x14 build/default/debug/_ext/1621872/plib_uart0.o
  .bss.uart0Obj  0x00000000        0x8 build/default/debug/_ext/1621872/plib_uart0.o
- .debug_info    0x00000000      0x5fc build/default/debug/_ext/1621872/plib_uart0.o
- .debug_abbrev  0x00000000      0x157 build/default/debug/_ext/1621872/plib_uart0.o
- .debug_loc     0x00000000       0x20 build/default/debug/_ext/1621872/plib_uart0.o
+ .text.UART0_InterruptHandler
+                0x00000000       0x50 build/default/debug/_ext/1621872/plib_uart0.o
+ .text.UART0_Initialize
+                0x00000000       0x68 build/default/debug/_ext/1621872/plib_uart0.o
+ .text.UART0_CallbackRegister
+                0x00000000       0x44 build/default/debug/_ext/1621872/plib_uart0.o
+ .debug_info    0x00000000      0x5de build/default/debug/_ext/1621872/plib_uart0.o
+ .debug_abbrev  0x00000000      0x12a build/default/debug/_ext/1621872/plib_uart0.o
+ .debug_loc     0x00000000       0xb4 build/default/debug/_ext/1621872/plib_uart0.o
  .debug_aranges
                 0x00000000       0x30 build/default/debug/_ext/1621872/plib_uart0.o
  .debug_ranges  0x00000000       0x20 build/default/debug/_ext/1621872/plib_uart0.o
- .debug_line    0x00000000      0x1ad build/default/debug/_ext/1621872/plib_uart0.o
- .debug_str     0x00000000       0x1e build/default/debug/_ext/1621872/plib_uart0.o
+ .debug_line    0x00000000      0x15c build/default/debug/_ext/1621872/plib_uart0.o
+ .debug_str     0x00000000        0x0 build/default/debug/_ext/1621872/plib_uart0.o
  .comment       0x00000000       0x3e build/default/debug/_ext/1621872/plib_uart0.o
- .debug_frame   0x00000000       0x48 build/default/debug/_ext/1621872/plib_uart0.o
+ .debug_frame   0x00000000       0x6c build/default/debug/_ext/1621872/plib_uart0.o
  .ARM.attributes
                 0x00000000       0x39 build/default/debug/_ext/1621872/plib_uart0.o
  .text          0x00000000       0xac c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard\libgcc.a(_udivsi3.o)
@@ -352,6 +362,13 @@ Discarded input sections
  .data          0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
  .xc_stack_usage.hdr
                 0x00000000        0xe c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .text          0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .data          0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .bss           0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .xc_stack_usage
+                0x00000000       0x14 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .xc_stack_usage.hdr
+                0x00000000        0xe c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
  .text          0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
  .data          0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
  .xc_stack_usage.hdr
@@ -410,7 +427,7 @@ LOAD build/default/debug/_ext/1621872/plib_uart0.o
                 0x00000040                ABT_STACK_SIZE = 0x40
                 0x00000040                UND_STACK_SIZE = 0x40
 
-.text           0x26f00000      0xcb4
+.text           0x26f00000     0x1a7c
                 0x26f00000                . = ALIGN (0x4)
                 0x26f00000                _sfixed = .
  *(.textEntry)
@@ -419,127 +436,165 @@ LOAD build/default/debug/_ext/1621872/plib_uart0.o
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x26f0013c       0x40 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtbegin.o
  .text.AIC_INT_Initialize
-                0x26f0017c      0x108 build/default/debug/_ext/60163497/plib_aic.o
+                0x26f0017c      0x21c build/default/debug/_ext/60163497/plib_aic.o
                 0x26f0017c                AIC_INT_Initialize
+ .text.CLK_PeripheralClockInitialize
+                0x26f00398       0x60 build/default/debug/_ext/60165520/plib_clk.o
  .text.CLK_Initialize
-                0x26f00284       0x34 build/default/debug/_ext/60165520/plib_clk.o
-                0x26f00284                CLK_Initialize
+                0x26f003f8       0x14 build/default/debug/_ext/60165520/plib_clk.o
+                0x26f003f8                CLK_Initialize
  .text.Matrix_Initialize
-                0x26f002b8       0x50 build/default/debug/_ext/1666157715/plib_matrix.o
-                0x26f002b8                Matrix_Initialize
+                0x26f0040c       0xac build/default/debug/_ext/1666157715/plib_matrix.o
+                0x26f0040c                Matrix_Initialize
+ .text.MMU_Enable
+                0x26f004b8       0x40 build/default/debug/_ext/60175171/plib_mmu.o
+ .text.mmu_configure
+                0x26f004f8       0x48 build/default/debug/_ext/60175171/plib_mmu.o
  .text.icache_Enable
-                0x26f00308       0x28 build/default/debug/_ext/60175171/plib_mmu.o
-                0x26f00308                icache_Enable
+                0x26f00540       0x68 build/default/debug/_ext/60175171/plib_mmu.o
+                0x26f00540                icache_Enable
  .text.dcache_Enable
-                0x26f00330       0xf0 build/default/debug/_ext/60175171/plib_mmu.o
-                0x26f00330                dcache_Enable
+                0x26f005a8      0x2ac build/default/debug/_ext/60175171/plib_mmu.o
+                0x26f005a8                dcache_Enable
  .text.MMU_Initialize
-                0x26f00420      0x334 build/default/debug/_ext/60175171/plib_mmu.o
-                0x26f00420                MMU_Initialize
- .text.PIO_Initialize
-                0x26f00754       0x24 build/default/debug/_ext/60177924/plib_pio.o
-                0x26f00754                PIO_Initialize
+                0x26f00854      0x518 build/default/debug/_ext/60175171/plib_mmu.o
+                0x26f00854                MMU_Initialize
  .text.UART0_ISR_RX_Handler
-                0x26f00778       0xd4 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f00d6c      0x130 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.UART0_ISR_TX_Handler
-                0x26f0084c       0xdc build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f00e9c      0x13c build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_InterruptHandler
-                0x26f00928       0x90 build/default/debug/_ext/1865657120/plib_uart0.o
-                0x26f00928                PLIB_UART0_InterruptHandler
+                0x26f00fd8       0xc8 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f00fd8                PLIB_UART0_InterruptHandler
+ .text.PLIB_UART0_ErrorClear
+                0x26f010a0       0x60 build/default/debug/_ext/1865657120/plib_uart0.o
  .text.PLIB_UART0_Initialize
-                0x26f009b8       0x60 build/default/debug/_ext/1865657120/plib_uart0.o
-                0x26f009b8                PLIB_UART0_Initialize
+                0x26f01100       0xf8 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f01100                PLIB_UART0_Initialize
+ .text.PLIB_UART0_ErrorGet
+                0x26f011f8       0x50 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f011f8                PLIB_UART0_ErrorGet
+ .text.PLIB_UART0_Read
+                0x26f01248       0xc0 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f01248                PLIB_UART0_Read
+ .text.PLIB_UART0_Write
+                0x26f01308      0x104 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f01308                PLIB_UART0_Write
+ .text.PLIB_UART0_WriteCallbackRegister
+                0x26f0140c       0x44 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f0140c                PLIB_UART0_WriteCallbackRegister
+ .text.PLIB_UART0_ReadCallbackRegister
+                0x26f01450       0x44 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x26f01450                PLIB_UART0_ReadCallbackRegister
  .text.PLIB_COMMON_UpdateErrorStatus
-                0x26f00a18       0x10 build/default/debug/_ext/2061166547/plib_common.o
-                0x26f00a18                PLIB_COMMON_UpdateErrorStatus
+                0x26f01494       0x30 build/default/debug/_ext/2061166547/plib_common.o
+                0x26f01494                PLIB_COMMON_UpdateErrorStatus
  .text.XDMAC0_InterruptHandler
-                0x26f00a28       0x78 build/default/debug/_ext/47423391/plib_xdmac0.o
-                0x26f00a28                XDMAC0_InterruptHandler
+                0x26f014c4       0xd0 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x26f014c4                XDMAC0_InterruptHandler
  .text.XDMAC0_Initialize
-                0x26f00aa0       0x5c build/default/debug/_ext/47423391/plib_xdmac0.o
-                0x26f00aa0                XDMAC0_Initialize
+                0x26f01594       0xf8 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x26f01594                XDMAC0_Initialize
  .text.undefined_instruction_irq_handler
-                0x26f00afc        0x4 build/default/debug/_ext/1171490990/fault_handlers.o
-                0x26f00afc                undefined_instruction_irq_handler
+                0x26f0168c        0xc build/default/debug/_ext/1171490990/fault_handlers.o
+                0x26f0168c                undefined_instruction_irq_handler
  .text.software_interrupt_irq_handler
-                0x26f00b00        0x4 build/default/debug/_ext/1171490990/fault_handlers.o
-                0x26f00b00                software_interrupt_irq_handler
+                0x26f01698        0xc build/default/debug/_ext/1171490990/fault_handlers.o
+                0x26f01698                software_interrupt_irq_handler
  .text.data_abort_irq_handler
-                0x26f00b04        0x4 build/default/debug/_ext/1171490990/fault_handlers.o
-                0x26f00b04                data_abort_irq_handler
+                0x26f016a4        0xc build/default/debug/_ext/1171490990/fault_handlers.o
+                0x26f016a4                data_abort_irq_handler
  .text.prefetch_abort_irq_handler
-                0x26f00b08        0x4 build/default/debug/_ext/1171490990/fault_handlers.o
-                0x26f00b08                prefetch_abort_irq_handler
+                0x26f016b0        0xc build/default/debug/_ext/1171490990/fault_handlers.o
+                0x26f016b0                prefetch_abort_irq_handler
  .text.SYS_Initialize
-                0x26f00b0c       0x38 build/default/debug/_ext/1171490990/initialization.o
-                0x26f00b0c                SYS_Initialize
- *fill*         0x26f00b44        0xc 
- .text          0x26f00b50       0xbc build/default/debug/_ext/1171490990/cstartup.o
+                0x26f016bc       0x48 build/default/debug/_ext/1171490990/initialization.o
+                0x26f016bc                SYS_Initialize
+ *fill*         0x26f01704        0xc 
+ .text          0x26f01710       0xbc build/default/debug/_ext/1171490990/cstartup.o
  .text.SPURIOUS_INTERRUPT_Handler
-                0x26f00c0c       0x18 build/default/debug/_ext/1171490990/interrupts.o
-                0x26f00c0c                SPURIOUS_INTERRUPT_Handler
- .text.main     0x26f00c24       0x10 build/default/debug/_ext/1360937237/main.o
-                0x26f00c24                main
- .text.__dummy  0x26f00c34        0x2 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
-                0x26f00c34                __init_stdio
-                0x26f00c34                __init_host
- *fill*         0x26f00c36        0x2 
+                0x26f017cc       0x34 build/default/debug/_ext/1171490990/interrupts.o
+                0x26f017cc                SPURIOUS_INTERRUPT_Handler
+ .text.APP_WriteCallback
+                0x26f01800       0x30 build/default/debug/_ext/1360937237/main.o
+                0x26f01800                APP_WriteCallback
+ .text.APP_ReadCallback
+                0x26f01830       0x50 build/default/debug/_ext/1360937237/main.o
+                0x26f01830                APP_ReadCallback
+ .text.main     0x26f01880      0x160 build/default/debug/_ext/1360937237/main.o
+                0x26f01880                main
+ .text.__dummy  0x26f019e0        0x2 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+                0x26f019e0                __init_stdio
+                0x26f019e0                __init_host
+ *fill*         0x26f019e2        0x2 
  .text.__libc_start_init
-                0x26f00c38       0x5c c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
-                0x26f00c38                __libc_init_array
+                0x26f019e4       0x5c c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+                0x26f019e4                __libc_init_array
+ .text.memcpy   0x26f01a40       0x16 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+                0x26f01a40                memcpy
  *(.rodata .rodata* .gnu.linkonce.r.*)
+ *fill*         0x26f01a56        0x2 
+ .rodata        0x26f01a58        0x4 build/default/debug/_ext/1360937237/main.o
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x26f00c94                . = ALIGN (0x4)
+                0x26f01a5c                . = ALIGN (0x4)
  *(.init)
- .init          0x26f00c94        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crti.o
-                0x26f00c94                _init
- .init          0x26f00c98        0x8 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtn.o
-                0x26f00ca0                . = ALIGN (0x4)
-                0x26f00ca0                __preinit_array_start = .
+ .init          0x26f01a5c        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crti.o
+                0x26f01a5c                _init
+ .init          0x26f01a60        0x8 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtn.o
+                0x26f01a68                . = ALIGN (0x4)
+                0x26f01a68                __preinit_array_start = .
  *(.preinit_array)
-                0x26f00ca0                __preinit_array_end = .
-                0x26f00ca0                . = ALIGN (0x4)
-                0x26f00ca0                __init_array_start = .
+                0x26f01a68                __preinit_array_end = .
+                0x26f01a68                . = ALIGN (0x4)
+                0x26f01a68                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x26f00ca0        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtbegin.o
-                0x26f00ca4                __init_array_end = .
-                0x26f00ca4                . = ALIGN (0x4)
+ .init_array    0x26f01a68        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtbegin.o
+                0x26f01a6c                __init_array_end = .
+                0x26f01a6c                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x26f00ca4                . = ALIGN (0x4)
+                0x26f01a6c                . = ALIGN (0x4)
  *(.fini)
- .fini          0x26f00ca4        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crti.o
-                0x26f00ca4                _fini
- .fini          0x26f00ca8        0x8 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtn.o
-                0x26f00cb0                . = ALIGN (0x4)
-                0x26f00cb0                __fini_array_start = .
+ .fini          0x26f01a6c        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crti.o
+                0x26f01a6c                _fini
+ .fini          0x26f01a70        0x8 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtn.o
+                0x26f01a78                . = ALIGN (0x4)
+                0x26f01a78                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x26f00cb0        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtbegin.o
+ .fini_array    0x26f01a78        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
-                0x26f00cb4                __fini_array_end = .
+                0x26f01a7c                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *crtend.o(.dtors)
  *(.dinit*)
-                0x26f00cb4                . = ALIGN (0x4)
+                0x26f01a7c                . = ALIGN (0x4)
 
-.data           0x26f00cb4        0x0
+.data           0x26f01a7c       0x88
  *(.data .data.*)
-                0x26f00cb4                . = ALIGN (0x4)
-                0x26f00cb4                _efixed = .
+ .data.irqData  0x26f01a7c       0x20 build/default/debug/_ext/60163497/plib_aic.o
+ .data.messageStart
+                0x26f01a9c       0x45 build/default/debug/_ext/1360937237/main.o
+                0x26f01a9c                messageStart
+ *fill*         0x26f01ae1        0x3 
+ .data.messageError
+                0x26f01ae4       0x20 build/default/debug/_ext/1360937237/main.o
+                0x26f01ae4                messageError
+                0x26f01b04                . = ALIGN (0x4)
+                0x26f01b04                _efixed = .
                 [!provide]                PROVIDE (__exidx_start = .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 [!provide]                PROVIDE (__exidx_end = .)
-                0x26f00cb4                . = ALIGN (0x4)
-                0x26f00cb4                _etext = .
+                0x26f01b04                . = ALIGN (0x4)
+                0x26f01b04                _etext = .
 
-.relocate       0x00200000       0x3c load address 0x26f00cb4
+.relocate       0x00200000       0x3c load address 0x26f01b04
                 0x00200000                . = ALIGN (0x4)
                 0x00200000                _srelocate = .
  *(.vectors .vectors.*)
@@ -549,18 +604,17 @@ LOAD build/default/debug/_ext/1621872/plib_uart0.o
                 0x0020003c                _erelocate = .
 
 .region_cache_aligned_const
-                0x26f00cf0       0x10
-                0x26f00d00                . = ALIGN (0x20)
- *fill*         0x26f00cf0       0x10 
+                0x26f01b40        0x0
+                0x26f01b40                . = ALIGN (0x20)
  *(.region_cache_aligned_const .region_cache_aligned_const.*)
-                0x26f00d00                . = ALIGN (0x20)
+                0x26f01b40                . = ALIGN (0x20)
 
 .region_sram    0x0020003c        0x0
                 0x0020003c                . = ALIGN (0x4)
  *(.region_sram .region_sram.*)
 
-.region_ram     0x26f00d00        0x0
-                0x26f00d00                . = ALIGN (0x4)
+.region_ram     0x26f01b40        0x0
+                0x26f01b40                . = ALIGN (0x4)
  *(.region_ram .region_ram.*)
 
 .region_nocache
@@ -568,7 +622,7 @@ LOAD build/default/debug/_ext/1621872/plib_uart0.o
                 0x20000000                . = ALIGN (0x4)
  *(.region_nocache .region_nocache.*)
 
-.bss            0x26f04000     0x80ac
+.bss            0x26f04000     0x80bc
                 0x26f04000                . = ALIGN (0x4)
                 0x26f04000                _szero = .
  *(.bss .bss.*)
@@ -582,27 +636,43 @@ LOAD build/default/debug/_ext/1621872/plib_uart0.o
                 0x26f0c034       0x20 build/default/debug/_ext/47423391/plib_xdmac0.o
  .bss.spuriousEventCount.8613
                 0x26f0c054        0x4 build/default/debug/_ext/1171490990/interrupts.o
- .bss           0x26f0c058       0x50 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
-                0x26f0c058                __progname_full
-                0x26f0c058                program_invocation_name
-                0x26f0c05c                program_invocation_short_name
-                0x26f0c05c                __progname
-                0x26f0c060                __sysinfo
-                0x26f0c064                __hwcap
-                0x26f0c068                __libc
- .bss           0x26f0c0a8        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
-                0x26f0c0a8                __environ
-                0x26f0c0a8                environ
-                0x26f0c0a8                ___environ
-                0x26f0c0a8                _environ
+ .bss.receiveBuffer
+                0x26f0c058        0x3 build/default/debug/_ext/1360937237/main.o
+                0x26f0c058                receiveBuffer
+ *fill*         0x26f0c05b        0x1 
+ .bss.echoBuffer
+                0x26f0c05c        0x9 build/default/debug/_ext/1360937237/main.o
+                0x26f0c05c                echoBuffer
+ .bss.errorStatus
+                0x26f0c065        0x1 build/default/debug/_ext/1360937237/main.o
+                0x26f0c065                errorStatus
+ .bss.writeStatus
+                0x26f0c066        0x1 build/default/debug/_ext/1360937237/main.o
+                0x26f0c066                writeStatus
+ .bss.readStatus
+                0x26f0c067        0x1 build/default/debug/_ext/1360937237/main.o
+                0x26f0c067                readStatus
+ .bss           0x26f0c068       0x50 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+                0x26f0c068                __progname_full
+                0x26f0c068                program_invocation_name
+                0x26f0c06c                program_invocation_short_name
+                0x26f0c06c                __progname
+                0x26f0c070                __sysinfo
+                0x26f0c074                __hwcap
+                0x26f0c078                __libc
+ .bss           0x26f0c0b8        0x4 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+                0x26f0c0b8                __environ
+                0x26f0c0b8                environ
+                0x26f0c0b8                ___environ
+                0x26f0c0b8                _environ
  *(COMMON)
-                0x26f0c0ac                . = ALIGN (0x4)
-                0x26f0c0ac                _ezero = .
+                0x26f0c0bc                . = ALIGN (0x4)
+                0x26f0c0bc                _ezero = .
 
 .region_cache_aligned
-                0x26f0c0ac       0x14
+                0x26f0c0bc        0x4
                 0x26f0c0c0                . = ALIGN (0x20)
- *fill*         0x26f0c0ac       0x14 
+ *fill*         0x26f0c0bc        0x4 
  *(.region_cache_aligned .region_cache_aligned.*)
                 0x26f0c0c0                . = ALIGN (0x20)
 
@@ -676,31 +746,31 @@ LOAD stack
  .ARM.attributes
                 0x000000ff       0x39 build/default/debug/_ext/60175171/plib_mmu.o
  .ARM.attributes
-                0x00000138       0x39 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000138       0x39 build/default/debug/_ext/1865657120/plib_uart0.o
  .ARM.attributes
-                0x00000171       0x39 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x00000171       0x39 build/default/debug/_ext/2061166547/plib_common.o
  .ARM.attributes
-                0x000001aa       0x39 build/default/debug/_ext/2061166547/plib_common.o
+                0x000001aa       0x39 build/default/debug/_ext/47423391/plib_xdmac0.o
  .ARM.attributes
-                0x000001e3       0x39 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x000001e3       0x39 build/default/debug/_ext/1171490990/fault_handlers.o
  .ARM.attributes
-                0x0000021c       0x39 build/default/debug/_ext/1171490990/fault_handlers.o
+                0x0000021c       0x39 build/default/debug/_ext/1171490990/initialization.o
  .ARM.attributes
-                0x00000255       0x39 build/default/debug/_ext/1171490990/initialization.o
+                0x00000255       0x25 build/default/debug/_ext/1171490990/cstartup.o
  .ARM.attributes
-                0x0000028e       0x25 build/default/debug/_ext/1171490990/cstartup.o
+                0x0000027a       0x39 build/default/debug/_ext/1171490990/interrupts.o
  .ARM.attributes
-                0x000002b3       0x39 build/default/debug/_ext/1171490990/interrupts.o
+                0x000002b3       0x39 build/default/debug/_ext/1360937237/main.o
  .ARM.attributes
-                0x000002ec       0x39 build/default/debug/_ext/1360937237/main.o
+                0x000002ec       0x37 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
  .ARM.attributes
-                0x00000325       0x37 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+                0x00000323       0x33 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
  .ARM.attributes
-                0x0000035c       0x33 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+                0x00000356       0x37 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
  .ARM.attributes
-                0x0000038f       0x33 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+                0x0000038d       0x33 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
  .ARM.attributes
-                0x000003c2       0x1f c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtn.o
+                0x000003c0       0x1f c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtn.o
 
 .comment        0x00000000       0x3d
  .comment       0x00000000       0x3d c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7-a+simd/hard/crtbegin.o
@@ -709,7 +779,6 @@ LOAD stack
  .comment       0x0000003d       0x3e build/default/debug/_ext/60165520/plib_clk.o
  .comment       0x0000003d       0x3e build/default/debug/_ext/1666157715/plib_matrix.o
  .comment       0x0000003d       0x3e build/default/debug/_ext/60175171/plib_mmu.o
- .comment       0x0000003d       0x3e build/default/debug/_ext/60177924/plib_pio.o
  .comment       0x0000003d       0x3e build/default/debug/_ext/1865657120/plib_uart0.o
  .comment       0x0000003d       0x3e build/default/debug/_ext/2061166547/plib_common.o
  .comment       0x0000003d       0x3e build/default/debug/_ext/47423391/plib_xdmac0.o
@@ -719,155 +788,160 @@ LOAD stack
  .comment       0x0000003d       0x3e build/default/debug/_ext/1360937237/main.o
  .comment       0x0000003d       0x3e c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
  .comment       0x0000003d       0x3e c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .comment       0x0000003d       0x3e c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
  .comment       0x0000003d       0x3e c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
-.debug_info     0x00000000     0x85d3
- .debug_info    0x00000000      0xbef build/default/debug/_ext/60163497/plib_aic.o
- .debug_info    0x00000bef      0x8cb build/default/debug/_ext/60165520/plib_clk.o
- .debug_info    0x000014ba      0x94a build/default/debug/_ext/1666157715/plib_matrix.o
- .debug_info    0x00001e04     0x1d3c build/default/debug/_ext/60175171/plib_mmu.o
- .debug_info    0x00003b40      0xaf8 build/default/debug/_ext/60177924/plib_pio.o
- .debug_info    0x00004638      0xcc1 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_info    0x000052f9      0x3e0 build/default/debug/_ext/2061166547/plib_common.o
- .debug_info    0x000056d9      0xe70 build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_info    0x00006549      0x3b2 build/default/debug/_ext/1171490990/fault_handlers.o
- .debug_info    0x000068fb      0x470 build/default/debug/_ext/1171490990/initialization.o
- .debug_info    0x00006d6b       0x22 build/default/debug/_ext/1171490990/cstartup.o
- .debug_info    0x00006d8d      0x370 build/default/debug/_ext/1171490990/interrupts.o
- .debug_info    0x000070fd      0x338 build/default/debug/_ext/1360937237/main.o
- .debug_info    0x00007435      0x685 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
- .debug_info    0x00007aba      0x5b1 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
- .debug_info    0x0000806b      0x568 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+.debug_info     0x00000000     0x8058
+ .debug_info    0x00000000      0xba0 build/default/debug/_ext/60163497/plib_aic.o
+ .debug_info    0x00000ba0      0x8be build/default/debug/_ext/60165520/plib_clk.o
+ .debug_info    0x0000145e      0x941 build/default/debug/_ext/1666157715/plib_matrix.o
+ .debug_info    0x00001d9f     0x1aed build/default/debug/_ext/60175171/plib_mmu.o
+ .debug_info    0x0000388c      0xc1f build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_info    0x000044ab      0x3e4 build/default/debug/_ext/2061166547/plib_common.o
+ .debug_info    0x0000488f      0xdb5 build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_info    0x00005644      0x3b6 build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_info    0x000059fa      0x3bc build/default/debug/_ext/1171490990/initialization.o
+ .debug_info    0x00005db6       0x22 build/default/debug/_ext/1171490990/cstartup.o
+ .debug_info    0x00005dd8      0x371 build/default/debug/_ext/1171490990/interrupts.o
+ .debug_info    0x00006149      0xa81 build/default/debug/_ext/1360937237/main.o
+ .debug_info    0x00006bca      0x685 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_info    0x0000724f      0x5b1 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .debug_info    0x00007800      0x2f0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .debug_info    0x00007af0      0x568 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
-.debug_abbrev   0x00000000     0x124b
- .debug_abbrev  0x00000000      0x1d9 build/default/debug/_ext/60163497/plib_aic.o
- .debug_abbrev  0x000001d9       0xc2 build/default/debug/_ext/60165520/plib_clk.o
- .debug_abbrev  0x0000029b       0xcd build/default/debug/_ext/1666157715/plib_matrix.o
- .debug_abbrev  0x00000368      0x305 build/default/debug/_ext/60175171/plib_mmu.o
- .debug_abbrev  0x0000066d      0x132 build/default/debug/_ext/60177924/plib_pio.o
- .debug_abbrev  0x0000079f      0x305 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_abbrev  0x00000aa4       0xa2 build/default/debug/_ext/2061166547/plib_common.o
- .debug_abbrev  0x00000b46      0x265 build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_abbrev  0x00000dab       0x3e build/default/debug/_ext/1171490990/fault_handlers.o
- .debug_abbrev  0x00000de9       0xd7 build/default/debug/_ext/1171490990/initialization.o
- .debug_abbrev  0x00000ec0       0x12 build/default/debug/_ext/1171490990/cstartup.o
- .debug_abbrev  0x00000ed2       0x5b build/default/debug/_ext/1171490990/interrupts.o
- .debug_abbrev  0x00000f2d       0x6a build/default/debug/_ext/1360937237/main.o
- .debug_abbrev  0x00000f97      0x126 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
- .debug_abbrev  0x000010bd       0xc7 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
- .debug_abbrev  0x00001184       0xc7 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+.debug_abbrev   0x00000000     0x1084
+ .debug_abbrev  0x00000000      0x198 build/default/debug/_ext/60163497/plib_aic.o
+ .debug_abbrev  0x00000198       0xb1 build/default/debug/_ext/60165520/plib_clk.o
+ .debug_abbrev  0x00000249       0xca build/default/debug/_ext/1666157715/plib_matrix.o
+ .debug_abbrev  0x00000313      0x29d build/default/debug/_ext/60175171/plib_mmu.o
+ .debug_abbrev  0x000005b0      0x264 build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_abbrev  0x00000814       0xa2 build/default/debug/_ext/2061166547/plib_common.o
+ .debug_abbrev  0x000008b6      0x1f1 build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_abbrev  0x00000aa7       0x3e build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_abbrev  0x00000ae5       0x9f build/default/debug/_ext/1171490990/initialization.o
+ .debug_abbrev  0x00000b84       0x12 build/default/debug/_ext/1171490990/cstartup.o
+ .debug_abbrev  0x00000b96       0x5b build/default/debug/_ext/1171490990/interrupts.o
+ .debug_abbrev  0x00000bf1      0x143 build/default/debug/_ext/1360937237/main.o
+ .debug_abbrev  0x00000d34      0x126 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_abbrev  0x00000e5a       0xc7 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .debug_abbrev  0x00000f21       0x9c c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .debug_abbrev  0x00000fbd       0xc7 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
-.debug_loc      0x00000000     0x26c3
- .debug_loc     0x00000000       0xfe build/default/debug/_ext/60163497/plib_aic.o
- .debug_loc     0x000000fe       0x67 build/default/debug/_ext/1666157715/plib_matrix.o
- .debug_loc     0x00000165     0x19ba build/default/debug/_ext/60175171/plib_mmu.o
- .debug_loc     0x00001b1f       0xde build/default/debug/_ext/60177924/plib_pio.o
- .debug_loc     0x00001bfd      0x541 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_loc     0x0000213e      0x4cf build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_loc     0x0000260d       0x45 build/default/debug/_ext/1171490990/initialization.o
- .debug_loc     0x00002652       0x20 build/default/debug/_ext/1360937237/main.o
- .debug_loc     0x00002672       0x51 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+.debug_loc      0x00000000      0xecf
+ .debug_loc     0x00000000      0x110 build/default/debug/_ext/60163497/plib_aic.o
+ .debug_loc     0x00000110       0x70 build/default/debug/_ext/60165520/plib_clk.o
+ .debug_loc     0x00000180       0x44 build/default/debug/_ext/1666157715/plib_matrix.o
+ .debug_loc     0x000001c4      0x3ac build/default/debug/_ext/60175171/plib_mmu.o
+ .debug_loc     0x00000570      0x43c build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_loc     0x000009ac       0xcc build/default/debug/_ext/2061166547/plib_common.o
+ .debug_loc     0x00000a78      0x168 build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_loc     0x00000be0       0xb0 build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_loc     0x00000c90       0x38 build/default/debug/_ext/1171490990/initialization.o
+ .debug_loc     0x00000cc8       0x44 build/default/debug/_ext/1171490990/interrupts.o
+ .debug_loc     0x00000d0c       0xa8 build/default/debug/_ext/1360937237/main.o
+ .debug_loc     0x00000db4       0x51 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_loc     0x00000e05       0xca c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
 
-.debug_aranges  0x00000000      0x380
+.debug_aranges  0x00000000      0x370
  .debug_aranges
                 0x00000000       0x38 build/default/debug/_ext/60163497/plib_aic.o
  .debug_aranges
-                0x00000038       0x20 build/default/debug/_ext/60165520/plib_clk.o
+                0x00000038       0x28 build/default/debug/_ext/60165520/plib_clk.o
  .debug_aranges
-                0x00000058       0x20 build/default/debug/_ext/1666157715/plib_matrix.o
+                0x00000060       0x20 build/default/debug/_ext/1666157715/plib_matrix.o
  .debug_aranges
-                0x00000078       0x78 build/default/debug/_ext/60175171/plib_mmu.o
+                0x00000080       0x88 build/default/debug/_ext/60175171/plib_mmu.o
  .debug_aranges
-                0x000000f0       0x60 build/default/debug/_ext/60177924/plib_pio.o
+                0x00000108       0xa0 build/default/debug/_ext/1865657120/plib_uart0.o
  .debug_aranges
-                0x00000150       0x98 build/default/debug/_ext/1865657120/plib_uart0.o
+                0x000001a8       0x30 build/default/debug/_ext/2061166547/plib_common.o
  .debug_aranges
-                0x000001e8       0x30 build/default/debug/_ext/2061166547/plib_common.o
+                0x000001d8       0x48 build/default/debug/_ext/47423391/plib_xdmac0.o
  .debug_aranges
-                0x00000218       0x48 build/default/debug/_ext/47423391/plib_xdmac0.o
+                0x00000220       0x38 build/default/debug/_ext/1171490990/fault_handlers.o
  .debug_aranges
-                0x00000260       0x38 build/default/debug/_ext/1171490990/fault_handlers.o
+                0x00000258       0x20 build/default/debug/_ext/1171490990/initialization.o
  .debug_aranges
-                0x00000298       0x20 build/default/debug/_ext/1171490990/initialization.o
+                0x00000278       0x30 build/default/debug/_ext/1171490990/cstartup.o
  .debug_aranges
-                0x000002b8       0x30 build/default/debug/_ext/1171490990/cstartup.o
+                0x000002a8       0x20 build/default/debug/_ext/1171490990/interrupts.o
  .debug_aranges
-                0x000002e8       0x20 build/default/debug/_ext/1171490990/interrupts.o
+                0x000002c8       0x30 build/default/debug/_ext/1360937237/main.o
  .debug_aranges
-                0x00000308       0x20 build/default/debug/_ext/1360937237/main.o
+                0x000002f8       0x28 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
  .debug_aranges
-                0x00000328       0x28 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+                0x00000320       0x18 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
  .debug_aranges
-                0x00000350       0x18 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+                0x00000338       0x20 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
  .debug_aranges
-                0x00000368       0x18 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+                0x00000358       0x18 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
-.debug_ranges   0x00000000      0x6b8
+.debug_ranges   0x00000000      0x288
  .debug_ranges  0x00000000       0x28 build/default/debug/_ext/60163497/plib_aic.o
- .debug_ranges  0x00000028       0x10 build/default/debug/_ext/60165520/plib_clk.o
- .debug_ranges  0x00000038       0x10 build/default/debug/_ext/1666157715/plib_matrix.o
- .debug_ranges  0x00000048      0x488 build/default/debug/_ext/60175171/plib_mmu.o
- .debug_ranges  0x000004d0       0x50 build/default/debug/_ext/60177924/plib_pio.o
- .debug_ranges  0x00000520       0x88 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_ranges  0x000005a8       0x20 build/default/debug/_ext/2061166547/plib_common.o
- .debug_ranges  0x000005c8       0x38 build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_ranges  0x00000600       0x28 build/default/debug/_ext/1171490990/fault_handlers.o
- .debug_ranges  0x00000628       0x10 build/default/debug/_ext/1171490990/initialization.o
- .debug_ranges  0x00000638       0x28 build/default/debug/_ext/1171490990/cstartup.o
- .debug_ranges  0x00000660       0x10 build/default/debug/_ext/1171490990/interrupts.o
- .debug_ranges  0x00000670       0x10 build/default/debug/_ext/1360937237/main.o
- .debug_ranges  0x00000680       0x38 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_ranges  0x00000028       0x18 build/default/debug/_ext/60165520/plib_clk.o
+ .debug_ranges  0x00000040       0x10 build/default/debug/_ext/1666157715/plib_matrix.o
+ .debug_ranges  0x00000050       0x78 build/default/debug/_ext/60175171/plib_mmu.o
+ .debug_ranges  0x000000c8       0x90 build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_ranges  0x00000158       0x20 build/default/debug/_ext/2061166547/plib_common.o
+ .debug_ranges  0x00000178       0x38 build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_ranges  0x000001b0       0x28 build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_ranges  0x000001d8       0x10 build/default/debug/_ext/1171490990/initialization.o
+ .debug_ranges  0x000001e8       0x28 build/default/debug/_ext/1171490990/cstartup.o
+ .debug_ranges  0x00000210       0x10 build/default/debug/_ext/1171490990/interrupts.o
+ .debug_ranges  0x00000220       0x20 build/default/debug/_ext/1360937237/main.o
+ .debug_ranges  0x00000240       0x38 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_ranges  0x00000278       0x10 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
 
-.debug_line     0x00000000     0x2d46
- .debug_line    0x00000000      0x3b6 build/default/debug/_ext/60163497/plib_aic.o
- .debug_line    0x000003b6      0x109 build/default/debug/_ext/60165520/plib_clk.o
- .debug_line    0x000004bf      0x13e build/default/debug/_ext/1666157715/plib_matrix.o
- .debug_line    0x000005fd      0xfac build/default/debug/_ext/60175171/plib_mmu.o
- .debug_line    0x000015a9      0x20d build/default/debug/_ext/60177924/plib_pio.o
- .debug_line    0x000017b6      0x639 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_line    0x00001def       0xfc build/default/debug/_ext/2061166547/plib_common.o
- .debug_line    0x00001eeb      0x41c build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_line    0x00002307       0x9b build/default/debug/_ext/1171490990/fault_handlers.o
- .debug_line    0x000023a2      0x270 build/default/debug/_ext/1171490990/initialization.o
- .debug_line    0x00002612      0x107 build/default/debug/_ext/1171490990/cstartup.o
- .debug_line    0x00002719       0xaa build/default/debug/_ext/1171490990/interrupts.o
- .debug_line    0x000027c3       0x6d build/default/debug/_ext/1360937237/main.o
- .debug_line    0x00002830      0x245 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
- .debug_line    0x00002a75      0x132 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
- .debug_line    0x00002ba7      0x19f c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+.debug_line     0x00000000     0x2281
+ .debug_line    0x00000000      0x29a build/default/debug/_ext/60163497/plib_aic.o
+ .debug_line    0x0000029a      0x10f build/default/debug/_ext/60165520/plib_clk.o
+ .debug_line    0x000003a9      0x11b build/default/debug/_ext/1666157715/plib_matrix.o
+ .debug_line    0x000004c4      0xa56 build/default/debug/_ext/60175171/plib_mmu.o
+ .debug_line    0x00000f1a      0x47d build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_line    0x00001397       0xf0 build/default/debug/_ext/2061166547/plib_common.o
+ .debug_line    0x00001487      0x34a build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_line    0x000017d1       0x97 build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_line    0x00001868       0xf1 build/default/debug/_ext/1171490990/initialization.o
+ .debug_line    0x00001959      0x107 build/default/debug/_ext/1171490990/cstartup.o
+ .debug_line    0x00001a60       0xa8 build/default/debug/_ext/1171490990/interrupts.o
+ .debug_line    0x00001b08      0x171 build/default/debug/_ext/1360937237/main.o
+ .debug_line    0x00001c79      0x245 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_line    0x00001ebe      0x132 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .debug_line    0x00001ff0       0xf2 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .debug_line    0x000020e2      0x19f c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
-.debug_str      0x00000000      0x231
+.debug_str      0x00000000      0x180
  .debug_str     0x00000000       0x28 build/default/debug/_ext/60163497/plib_aic.o
  .debug_str     0x00000028        0x0 build/default/debug/_ext/60165520/plib_clk.o
  .debug_str     0x00000028       0x3c build/default/debug/_ext/1666157715/plib_matrix.o
  .debug_str     0x00000064       0x13 build/default/debug/_ext/60175171/plib_mmu.o
- .debug_str     0x00000077       0x1e build/default/debug/_ext/60177924/plib_pio.o
- .debug_str     0x00000095       0x44 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_str     0x000000d9        0x0 build/default/debug/_ext/2061166547/plib_common.o
- .debug_str     0x000000d9       0x48 build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_str     0x00000121        0x0 build/default/debug/_ext/1171490990/fault_handlers.o
- .debug_str     0x00000121       0x7a build/default/debug/_ext/1171490990/initialization.o
- .debug_str     0x0000019b       0x87 build/default/debug/_ext/1171490990/cstartup.o
- .debug_str     0x00000222        0x0 build/default/debug/_ext/1171490990/interrupts.o
- .debug_str     0x00000222        0xf build/default/debug/_ext/1360937237/main.o
- .debug_str     0x00000231        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
- .debug_str     0x00000231        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
- .debug_str     0x00000231        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
+ .debug_str     0x00000077       0x44 build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_str     0x000000bb        0x0 build/default/debug/_ext/2061166547/plib_common.o
+ .debug_str     0x000000bb       0x2a build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_str     0x000000e5        0x0 build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_str     0x000000e5        0x0 build/default/debug/_ext/1171490990/initialization.o
+ .debug_str     0x000000e5       0x87 build/default/debug/_ext/1171490990/cstartup.o
+ .debug_str     0x0000016c        0x0 build/default/debug/_ext/1171490990/interrupts.o
+ .debug_str     0x0000016c       0x14 build/default/debug/_ext/1360937237/main.o
+ .debug_str     0x00000180        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_str     0x00000180        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .debug_str     0x00000180        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
+ .debug_str     0x00000180        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
-.debug_frame    0x00000000      0x5b4
- .debug_frame   0x00000000       0x58 build/default/debug/_ext/60163497/plib_aic.o
- .debug_frame   0x00000058       0x20 build/default/debug/_ext/60165520/plib_clk.o
- .debug_frame   0x00000078       0x20 build/default/debug/_ext/1666157715/plib_matrix.o
- .debug_frame   0x00000098      0x154 build/default/debug/_ext/60175171/plib_mmu.o
- .debug_frame   0x000001ec       0xa0 build/default/debug/_ext/60177924/plib_pio.o
- .debug_frame   0x0000028c      0x140 build/default/debug/_ext/1865657120/plib_uart0.o
- .debug_frame   0x000003cc       0x40 build/default/debug/_ext/2061166547/plib_common.o
- .debug_frame   0x0000040c       0xac build/default/debug/_ext/47423391/plib_xdmac0.o
- .debug_frame   0x000004b8       0x50 build/default/debug/_ext/1171490990/fault_handlers.o
- .debug_frame   0x00000508       0x28 build/default/debug/_ext/1171490990/initialization.o
- .debug_frame   0x00000530       0x20 build/default/debug/_ext/1171490990/interrupts.o
- .debug_frame   0x00000550       0x28 build/default/debug/_ext/1360937237/main.o
- .debug_frame   0x00000578       0x3c c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+.debug_frame    0x00000000      0x808
+ .debug_frame   0x00000000       0x94 build/default/debug/_ext/60163497/plib_aic.o
+ .debug_frame   0x00000094       0x4c build/default/debug/_ext/60165520/plib_clk.o
+ .debug_frame   0x000000e0       0x30 build/default/debug/_ext/1666157715/plib_matrix.o
+ .debug_frame   0x00000110      0x1e8 build/default/debug/_ext/60175171/plib_mmu.o
+ .debug_frame   0x000002f8      0x230 build/default/debug/_ext/1865657120/plib_uart0.o
+ .debug_frame   0x00000528       0x70 build/default/debug/_ext/2061166547/plib_common.o
+ .debug_frame   0x00000598       0xd0 build/default/debug/_ext/47423391/plib_xdmac0.o
+ .debug_frame   0x00000668       0x70 build/default/debug/_ext/1171490990/fault_handlers.o
+ .debug_frame   0x000006d8       0x30 build/default/debug/_ext/1171490990/initialization.o
+ .debug_frame   0x00000708       0x30 build/default/debug/_ext/1171490990/interrupts.o
+ .debug_frame   0x00000738       0x6c build/default/debug/_ext/1360937237/main.o
+ .debug_frame   0x000007a4       0x3c c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
+ .debug_frame   0x000007e0       0x28 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
 
 .note.GNU-stack
                 0x00000000        0x0
@@ -875,6 +949,8 @@ LOAD stack
                 0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__libc_start_main.o)
  .note.GNU-stack
                 0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(libc.o)
+ .note.GNU-stack
+                0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(memcpy.o)
  .note.GNU-stack
                 0x00000000        0x0 c:/program files/microchip/xc32/v4.09/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7-a+simd/hard\libg-musl.a(__environ.o)
 
